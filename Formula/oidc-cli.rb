@@ -5,21 +5,21 @@
 class OidcCli < Formula
   desc "Command-line OIDC client, get a token without all the fuss"
   homepage "https://github.com/jentz/vigilant-dollop"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/jentz/vigilant-dollop/releases/download/v0.1.2/vigilant-dollop_Darwin_x86_64.tar.gz"
-      sha256 "58f0adb3104c677f42e22b99fdfdd0847f0a93679640712b477f7ac2909de242"
+      url "https://github.com/jentz/vigilant-dollop/releases/download/v0.1.3/vigilant-dollop_Darwin_x86_64.tar.gz"
+      sha256 "dccf7d536f2b647758de99e4b041f40c1f216eb11ceca4815d94d00ac518da90"
 
       def install
         bin.install "oidc-cli"
       end
     end
     on_arm do
-      url "https://github.com/jentz/vigilant-dollop/releases/download/v0.1.2/vigilant-dollop_Darwin_arm64.tar.gz"
-      sha256 "fd8302bf71a35d9f2526b4720380abcef71322834983162193011270fee8a47c"
+      url "https://github.com/jentz/vigilant-dollop/releases/download/v0.1.3/vigilant-dollop_Darwin_arm64.tar.gz"
+      sha256 "3c02e248d9ac9ecd7da840c918512a0f8f552d311146b9b7943580d278574789"
 
       def install
         bin.install "oidc-cli"
@@ -30,8 +30,8 @@ class OidcCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jentz/vigilant-dollop/releases/download/v0.1.2/vigilant-dollop_Linux_x86_64.tar.gz"
-        sha256 "44cbc3b81cbe20af2c4d3fa6e0cb0bcbabdd640f17eb07b87596feb4fe94bd45"
+        url "https://github.com/jentz/vigilant-dollop/releases/download/v0.1.3/vigilant-dollop_Linux_x86_64.tar.gz"
+        sha256 "306ee6fa22fa677d1348d823ff0dfd69475a5af64a0bb180ff0c114a741b6e44"
 
         def install
           bin.install "oidc-cli"
@@ -40,8 +40,8 @@ class OidcCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jentz/vigilant-dollop/releases/download/v0.1.2/vigilant-dollop_Linux_arm64.tar.gz"
-        sha256 "a3b7134a54e3c616b1463e42814650d1239a909d21082c9d0ac2ba2487e7d3fa"
+        url "https://github.com/jentz/vigilant-dollop/releases/download/v0.1.3/vigilant-dollop_Linux_arm64.tar.gz"
+        sha256 "12cf8551cc6856a64b9e2b62e53968b19f6356daf3276fbd52086777e7983b43"
 
         def install
           bin.install "oidc-cli"
