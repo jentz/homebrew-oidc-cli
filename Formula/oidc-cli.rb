@@ -5,21 +5,21 @@
 class OidcCli < Formula
   desc "Command-line OIDC client, get a token without all the fuss"
   homepage "https://github.com/jentz/oidc-cli"
-  version "0.1.15"
+  version "0.1.16"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.15/oidc-cli_Darwin_x86_64.tar.gz"
-      sha256 "7e4ce5156709881f66f57f66042a5662e00f2080108644b4827c349023a5168b"
+      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.16/oidc-cli_Darwin_x86_64.tar.gz"
+      sha256 "53ce9a2771642f60de58699a39a8d6d6fe2280c690a9f81002ee0a5ff771fafa"
 
       def install
         bin.install "oidc-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.15/oidc-cli_Darwin_arm64.tar.gz"
-      sha256 "64aed385763cfef4091bdf07263908086e43589d2b5eb6fc9eb80ef0aafdc5fa"
+      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.16/oidc-cli_Darwin_arm64.tar.gz"
+      sha256 "0f9f6671abac7a49524c9b6d24f00671bda4f4b68e98a8cdf76fd00a856a03c7"
 
       def install
         bin.install "oidc-cli"
@@ -29,15 +29,15 @@ class OidcCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.15/oidc-cli_Linux_x86_64.tar.gz"
-      sha256 "8b5de49ed0a854170ce9510facf3c34b8762901e4ce105eccdb157da9bda3ea9"
+      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.16/oidc-cli_Linux_x86_64.tar.gz"
+      sha256 "a585cb74361a4e68970c4524b8bdd79ce15ca3121d6504755a98ccbe0a4a4a13"
       def install
         bin.install "oidc-cli"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.15/oidc-cli_Linux_arm64.tar.gz"
-      sha256 "381ae2688d926e724a7d3ffff00c08267eecbea5330f5d5f5170914d19346a40"
+      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.16/oidc-cli_Linux_arm64.tar.gz"
+      sha256 "afa2ae03d32553d5226157d7c9ea088d6c001c2a0f8528349ba280c8b1288ccd"
       def install
         bin.install "oidc-cli"
       end
