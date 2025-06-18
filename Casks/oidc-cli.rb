@@ -2,7 +2,7 @@
 cask "oidc-cli" do
   desc "Command-line OIDC client, get a token without all the fuss"
   homepage "https://github.com/jentz/oidc-cli"
-  version "0.1.17"
+  version "0.1.18"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,25 +12,29 @@ cask "oidc-cli" do
 
   on_macos do
     on_intel do
-      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.17/oidc-cli_Darwin_x86_64.tar.gz"
-      sha256 "d4ee2ac2eeca9eb09b31288fce6a075f032d1c2c109873588b9edfa4c664bf42"
+      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.18/oidc-cli_Darwin_x86_64.tar.gz"
+      sha256 "5d5ea03bc03d57f5db282af4fe4f09047f1f81bafec4084b898c56710df63b5b"
     end
     on_arm do
-      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.17/oidc-cli_Darwin_arm64.tar.gz"
-      sha256 "67cd3ce22286758bc7b936bf5c33dfc2c64d55a39d2bf39e6e08983a7aa9a3e7"
+      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.18/oidc-cli_Darwin_arm64.tar.gz"
+      sha256 "482639263ae91a23c2a183f21fe777af3503f73ebad83d8f67cfe55924dd2f7b"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.17/oidc-cli_Linux_x86_64.tar.gz"
-      sha256 "e5da13a26dbd3d10273638d0c4c28741dad2b28916e58208f5d989a2e468a4a4"
+      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.18/oidc-cli_Linux_x86_64.tar.gz"
+      sha256 "7aecdd520a01aada8486583ffdbaeb0c646bf0c853beaf351fcc89414a4922e0"
     end
     on_arm do
-      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.17/oidc-cli_Linux_arm64.tar.gz"
-      sha256 "4507a9b98450417d935e749d0a2b9d1d1066dd940ce75bc8d8321403f6535ecc"
+      url "https://github.com/jentz/oidc-cli/releases/download/v0.1.18/oidc-cli_Linux_arm64.tar.gz"
+      sha256 "e37d07be1b566637d9fac781c1ad43715daf1136325c97215ed7dce0b0f7f361"
     end
   end
+
+  conflicts_with formula: [
+      "oidc-cli",
+    ]
 
   postflight do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
