@@ -5,9 +5,11 @@
 class OidcCli < Formula
   desc "Command-line OIDC client, get a token without all the fuss"
   homepage "https://github.com/jentz/oidc-cli"
-  version "0.1.16"
+  version "0.1.17"
   license "MIT"
-
+  
+  disable! date: "2025-06-18", because: "the cask should be used now instead", replacement_cask: "oidc-cli"
+  
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jentz/oidc-cli/releases/download/v0.1.16/oidc-cli_Darwin_x86_64.tar.gz"
